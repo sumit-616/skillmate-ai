@@ -9,3 +9,4 @@ export default defineSchema({
     subscriptionId: v.string(),
   })
 })
+
