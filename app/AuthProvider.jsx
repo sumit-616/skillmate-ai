@@ -1,3 +1,4 @@
+"use client";
 import { api } from '@/convex/_generated/api';
 import { useUser } from '@stackframe/stack'
 import { useMutation } from 'convex/react';
@@ -9,14 +10,16 @@ const AuthProvider = ({children}) => {
 
   useEffect(()=>{
     console.log(user);
+    CreateNewUser();
   },[user]);
 
 
-  const CreateNewUser = async ()=>{
+  const CreateNewUser = async () =>{
     const result = await CreateUser({
       name:user?.displayName,
       email: user?.primaryEmail,
     })
+    console.log(result);
   }
 
   return (
