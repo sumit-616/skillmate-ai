@@ -7,7 +7,7 @@ const Provider = ({ children }) => {
   const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL);
   return (
     <div>
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<p>Loading...</p>}>
         <ConvexProvider client={convex}>
           <AuthProvider>
             {children}
