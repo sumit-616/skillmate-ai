@@ -9,6 +9,7 @@ export const CreateUser = mutation({
   handler: async(ctx, args)=>{
     // if user already exists
     const userData = await ctx.db.query('users').filter(q => q.eq(q.field('email'),args.email)).collect();
+    
     // if not then add new user
     if(userData?.length==0){
       const data = {
