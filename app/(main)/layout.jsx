@@ -1,11 +1,11 @@
 import React from 'react'
-import AppHeader from './_components/AppHeader';
+import AppHeader from "@components/custom/AppHeader";
 
-const DashboardLayout = ({children}) => {
+const DashboardLayout = ({ children }) => {
   return (
     <div>
       <AppHeader />
-      <div className='p-10 mt-10 md:px-15 lg:px-24 xl:px-44 2xl:px-64'>
+      <div className='p-10 mt-14 md:px-20 lg:px-32 xl:px-56 2xl:px-72'>
         {children}
       </div>
     </div>
