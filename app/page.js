@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@stackframe/stack";
 import Image from "next/image";
+import { UserButton } from "@stackframe/stack";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
