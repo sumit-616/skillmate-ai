@@ -16,9 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SkillMate AI",
+  title: "Skillmate Ai",
   description:
     "Your intelligent companion for mastering any skill, anytime, anywhere.",
+  icons: {
+    icon: "/latest-logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
