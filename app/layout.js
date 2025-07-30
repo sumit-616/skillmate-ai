@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Skillmate Ai",
+  title: "SkillMate AI",
   description:
     "Your intelligent companion for mastering any skill, anytime, anywhere.",
   icons: {

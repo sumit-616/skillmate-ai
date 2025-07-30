@@ -17,7 +17,7 @@ export default function Home() {
             className="w-12 h-9"
           />
           <span className="text-2xl md:text-3xl font-bold font-sans leading-none bg-gradient-to-r from-purple-500 to-blue-400 text-transparent bg-clip-text relative top-[4px] md:top-[6px]">
-            Skillmate Ai
+            SkillMate AI
           </span>
         </Link>
 
