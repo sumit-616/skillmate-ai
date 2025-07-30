@@ -5,7 +5,8 @@ import { useUser } from "@stackframe/stack";
 import { CoachingExpert, CoachingOptions } from "@services/Options";
 import { Button } from "@components/ui/button";
 import { BlurFade } from "@components/magicui/blur-fade";
-import UserInputDialog from "./UserInputDialog";
+import UserInputDialog from "@/components/custom/UserInputDialog";
+import ProfileDialog from "@/components/custom/ProfileDialog";
 
 const FeatureAssistant = () => {
   const user = useUser();
@@ -19,7 +20,9 @@ const FeatureAssistant = () => {
             Welcome back, {user?.displayName}
           </h2>
         </div>
-        <Button className="cursor-pointer">Profile</Button>
+        <ProfileDialog>
+          <Button className="cursor-pointer">Profile</Button>
+        </ProfileDialog>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mt-10">
         {CoachingOptions.map((option, index) => (

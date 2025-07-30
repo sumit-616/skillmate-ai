@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -17,6 +17,7 @@ import { useMutation } from "convex/react";
 import { api } from "@convex/_generated/api";
 import { LoaderCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { UserContext } from "@context/UserContext";
 
 const UserInputDialog = ({ children, coachingOption }) => {
 
@@ -25,6 +26,7 @@ const UserInputDialog = ({ children, coachingOption }) => {
   const createDiscussionRoom = useMutation(api.DiscussionRoom.CreateNewRoom);
   const [loading,setLoading] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
+  const {userData} = useContext(UserContext);
   const router = useRouter();
 
   const OnClickNext = async() => {
@@ -33,8 +35,9 @@ const UserInputDialog = ({ children, coachingOption }) => {
       coachingOption: coachingOption?.name,
       topic:topic,
       expertName: selectedExpert,
+      uid: userData?._id,
     })
-    console.log(result);
+    // console.log(result);
     setLoading(false);
     setOpenDialog(false);
     router.push('/discussion-room/'+result);
