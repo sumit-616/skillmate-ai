@@ -3,7 +3,7 @@ import { mutation } from "@/convex/_generated/server";
 
 export const CreateUser = mutation({
   args: {
-    name: v.string(),
+    name: v.optional(v.string()),
     email: v.string(),
   },
   handler: async (ctx, args) => {
@@ -16,7 +16,7 @@ export const CreateUser = mutation({
     // if not then add new user
     if (userData?.length == 0) {
       const data = {
-        name: args.name,
+        name: args.name ?? "User",
         email: args.email,
         credits: 50000,
       };
