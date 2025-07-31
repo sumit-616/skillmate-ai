@@ -269,7 +269,7 @@ const DiscussionRoom = () => {
             )}
           </div>
         </div>
-        <div className="col-span-3">
+        <div className="xl:col-span-3">
           <ChatBox
             conversation={conversation}
             enableFeedbackNotes={enableFeedbackNotes}
