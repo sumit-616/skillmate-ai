@@ -48,7 +48,7 @@ skillmate-ai/
 | Styling            | Tailwind CSS                       |
 | Icons              | Lucide / Heroicons                 |
 | State Management   | React local state / Context API    |
-| AI Logic (optional)| OpenAI API or custom backend       |
+| AI Logic           | OpenAI API                         |
 | Deployment         | Vercel                             |
 
 ---
